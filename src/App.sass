@@ -1,0 +1,99 @@
+@import 'shared/styles/fonts'
+@import 'shared/styles/colors'
+
+body 
+  background: $backgroundColor
+.App
+  .title
+    font-family: $font-arvo
+    margin: 0
+    font-size: 144px
+    color: $base
+    .letterO
+      color: $accent
+  .subtitle
+    margin: 0
+    font-size: 26px
+    text-align: center
+    color: $alter
+    font-family: $font-open
+  .codes
+    color: $accent
+    font-size: 36px
+    text-align: center
+    margin: 0
+    font-family: $font-open
+  .meImage
+    border-radius: 500px
+    filter: blur(10px)
+    &:hover
+      filter: none
+  .story
+    color: $base
+    font-family: $font-open
+    font-size: 24px
+.flex-grid
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  margin: 10% 0 0 0
+  padding: 0
+  .left
+    margin-right: 200px
+.downButton
+  font-size: 48px
+  text-align: baseline
+  color: $base
+
+
+$fireColor: #19d4da;
+$fireColorT: #ff51001e;
+$dur: 1s;
+$blur: 0.02em;
+$fireRad: 3em;
+$parts: 50;
+$partSize: 5em;
+
+
+.fire 
+	font-size: 14px;
+	filter: blur($blur);
+	-webkit-filter: blur($blur);
+	margin: 0;
+	position: relative;
+	width: 10em;
+	height: 12em;
+
+.particle 
+	animation: rise $dur ease-in infinite;
+	background-image: radial-gradient($fireColor 20%,$fireColorT 70%);
+	border-radius: 50%;
+	mix-blend-mode: screen;
+	opacity: 0;
+	margin-left: -75px;
+	position: absolute;
+	bottom: 0;
+	width: $partSize;
+	height: $partSize;
+	// spread particles out in time and x-position to get desired effect
+	@for $p from 1 through $parts 
+		&:nth-of-type(#{$p}) 
+			animation-delay: $dur * random();
+			left: calc((100% - #{$partSize}) * #{($p - 1)/$parts});
+		
+	
+
+@keyframes rise 
+	from 
+		opacity: 0;
+		transform: translateY(0) scale(1);
+	
+	25% 
+		opacity: 1;
+	
+	to 
+		opacity: 0;
+		transform: translateY(-10em) scale(0);
+	
+
