@@ -81,8 +81,12 @@ $partSize: 5em;
 		&:nth-of-type(#{$p}) 
 			animation-delay: $dur * random();
 			left: calc((100% - #{$partSize}) * #{($p - 1)/$parts});
-		
-	
+.codeword
+  font-family: $font-shared;
+  font-size: 48px; 
+.creativityword
+  font-family: $font-pacifico;
+  font-size: 48px
 
 @keyframes rise 
 	from 
@@ -95,5 +99,3 @@ $partSize: 5em;
 	to 
 		opacity: 0;
 		transform: translateY(-10em) scale(0);
-	
-

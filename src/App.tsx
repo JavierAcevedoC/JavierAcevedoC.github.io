@@ -8,8 +8,7 @@ function App() {
       <div className="flex-grid">
         <div className="left">
           <h1 className="title">Hell<a className="letterO">o <i className="fire"> { createFire() } </i></a>!</h1>
-          <h2 className="subtitle">*Code and some creativity*</h2>
-          <h5 className="codes">@ {'</>'} </h5>
+            <h2 className="subtitle">* <p className="codeword">Code</p> and some <p className="creativityword">Creativity</p>*</h2>
         </div>
         <div>
           <img className="meImage" src={me} alt="Hey there its me!"/>
