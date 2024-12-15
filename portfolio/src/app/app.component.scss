@@ -1,0 +1,11 @@
+img {
+    border-radius: 50%;
+    transition:all 0.250s ease-in-out;
+    width: 0;
+}
+
+#profile:hover {
+    img {
+        width: 250px;
+    }
+}

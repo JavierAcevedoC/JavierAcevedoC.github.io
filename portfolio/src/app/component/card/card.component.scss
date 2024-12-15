@@ -1,0 +1,33 @@
+.card {
+    max-width: 450px;
+    max-height: 450px;
+    h3,h4,a {
+        color: black;
+    }
+    a {
+        font-size: xx-large;
+        text-decoration: none;
+        transition:all 0.250s ease-in-out;  
+    }
+    border-radius: 16px;
+    padding: 24px;
+    transition:all 0.250s ease-in-out;  
+    img {
+        max-width: 0;
+        max-height: 0;
+        border-radius: 8px;
+        transition:all 0.250s ease-in-out;
+        filter: grayscale(100%);
+    }
+}
+
+.card:hover {
+    a {
+        color: white;
+        font-weight: 600;
+    }
+    img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+}

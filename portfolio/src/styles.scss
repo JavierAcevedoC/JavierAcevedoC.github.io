@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: black;
+    font-family: "Doto", serif !important;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 0;
+    h1,h2, h3, h4, h5, h6, p, a, span, label, button {
+        color: white;
+    }
+}
+
+.dot {
+    font-family: "Doto", serif !important;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 0;
+}
+
+.jura {
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 0;
+}
