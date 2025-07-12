@@ -5,9 +5,9 @@ services:
     expose:
       - "8080"
 
-  caddy:
+  caddy_portfolio:
     image: caddy:latest
-    container_name: caddy
+    container_name: caddy_portfolio
     volumes:
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
