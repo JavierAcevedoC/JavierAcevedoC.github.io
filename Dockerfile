@@ -1,9 +1,9 @@
 # Etapa 1: Build
 FROM node:20-alpine as builder
 WORKDIR /app
-COPY package*.json ./
+COPY portfolio/package*.json ./
 RUN npm install
-COPY . .
+COPY portfolio/. .
 RUN npm run build --configuration production
 
 # Etapa 2: Servidor Nginx
