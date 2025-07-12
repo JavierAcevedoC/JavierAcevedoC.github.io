@@ -4,7 +4,7 @@ WORKDIR /app
 COPY portfolio/package*.json ./
 RUN npm install
 COPY portfolio/. .
-RUN npm run build --configuration production
+RUN npm run build 
 
 # Etapa 2: Servidor Nginx
 FROM nginx:alpine
