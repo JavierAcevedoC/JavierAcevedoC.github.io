@@ -1,6 +1,8 @@
 .card {
     max-width: 450px;
     max-height: 450px;
+    min-width: 250px;
+    min-height: 200px;
     h3,h4,a {
         color: black;
     }

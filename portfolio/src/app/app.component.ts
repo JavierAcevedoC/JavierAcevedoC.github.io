@@ -50,7 +50,7 @@ export class AppComponent {
 
     const alpaca = new CardBuilder()
       .setColor("rgb(240, 140, 46)")
-      .setTitle("Alpaca")
+      .setTitle("Alpaca Plugin")
       .setSubtitle("A plugin to generate responses")
       .setContent("A plugin for pop-launcher that use local LLM across IPC")
       .setGithub("https://github.com/JavierAcevedoC/alpaca")
@@ -70,7 +70,7 @@ export class AppComponent {
 
     const spotibar = new CardBuilder()
       .setColor("rgb(0, 109, 89)")
-      .setTitle("Spotibar")
+      .setTitle("Spotibar Plugin")
       .setContent("Polybar plugin for Spotify that uses the Spotify Web API. Note that this requires a Spotify premium account.")
       .setGithub("https://github.com/JavierAcevedoC/spotibar")
       .setDemo("https://user-images.githubusercontent.com/2671067/111181789-3aa6b000-85a6-11eb-8511-da536700438a.png")
