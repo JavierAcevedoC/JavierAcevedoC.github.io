@@ -8,6 +8,6 @@ RUN npm run build
 
 # Etapa 2: Servidor Nginx
 FROM nginx:alpine
-COPY --from=builder /app/dist/portfolio /usr/share/nginx/html
+COPY --from=builder /app/dist/portfolio/browser /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
