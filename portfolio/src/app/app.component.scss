@@ -1,11 +1,76 @@
 img {
-    border-radius: 50%;
-    transition:all 0.250s ease-in-out;
-    width: 0;
+  border: 5px solid white;
+  transition: all 0.25s ease-in-out;
+  width: 250px;
+  filter: grayscale(100%);
+}
+h1,
+h2 {
+  font-size: 2vw;
+  cursor: pointer;
+  color: black;
 }
 
-#profile:hover {
-    img {
-        width: 250px;
-    }
+h1 {
+  font-weight: 600;
+  background: linear-gradient(90deg, white 0%, black 50%, white 100%);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 3s linear infinite;
+  &:hover {
+    animation: none;
+    color: black;
+  }
+}
+
+#profile {
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  &:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.custom {
+  background: green;
+  color: rebeccapurple;
+}
+
+.text-animated {
+  font-weight: 600;
+  background: linear-gradient(90deg, white 0%, black 50%, white 100%);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 3s linear infinite;
+  &:hover {
+    animation: none;
+    color: black;
+  }
+}
+
+.hide {
+  animation: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  height: 100px;
+  h2,
+  h3,
+  h4,
+  img {
+    display: none;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
 }
