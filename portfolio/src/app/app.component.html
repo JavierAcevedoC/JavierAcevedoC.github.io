@@ -1,25 +1,28 @@
 <!-- <router-outlet /> -->
 <div class="grid p-0 m-0">
-    <div class="col-4"></div>
-    <div id="profile" class="col-4 text-center">
-        <h1>PORTFOLIO</h1>
-        <h2>- Javier Acevedo -</h2>
-        <img src="./pics/me.jpg">
-        <h3>Software developer / Tech Builder</h3>
-        <h4> << Keep learning, keep building useful, usable and attitude products >> </h4>
-    </div>
-    <div class="col-4"></div>
+  <div class="col"></div>
+  <div id="profile" class="col-12 md:col-6 text-center m-4">
+    <h1 (click)="showPortfolio()">-> PORTFOLIO <-</h1>
+
+    <img class="pulse-shadow" src="./pics/me.jpg" />
+    <h2>* Javier Acevedo *</h2>
+    <h3>Software developer / Tech Builder</h3>
+    <h4 class="text-animated">
+      << Keep learning, keep building useful, usable and attitude products >>
+    </h4>
+  </div>
+  <div class="col"></div>
 </div>
-<div class="grid p-0 m-0">
-    <div class="col-4"></div>
-    <div class="col-4">
-        <div class="grid p-0 m-0">
+@if (!hide) {
+  <div class="grid p-0 m-0">
+    <div class="col-12 md:col">
+      <div class="grid nested-grid">
         @for (card of cards; track $index) {
-        <div class="col">
+          <div class="{{ card.col }}">
             <app-card [config]="card"></app-card>
-        </div>
+          </div>
         }
-        </div>
+      </div>
     </div>
-    <div class="col-4"></div> 
-</div>
+  </div>
+}

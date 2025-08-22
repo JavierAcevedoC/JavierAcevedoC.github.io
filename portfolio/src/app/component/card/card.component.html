@@ -1,17 +1,20 @@
-@if(config !== undefined) {
-<div class="jura card" 
-[style.background-color]="config.color">
+@if (config !== undefined) {
+  <div class="jura card sand">
     <div>
-        <a class="dot title" href="{{config.github}}" target="_blank">{{config.title}}</a>
-        <h4>{{config.subtitle}}</h4>
+      <a class="dot title" href="{{ config.github }}" target="_blank">{{
+        config.title
+      }}</a>
+      <h4>{{ config.subtitle }}</h4>
     </div>
     <div>
-        <h3>{{config.content}}</h3>
+      <h3>{{ config.content }}</h3>
     </div>
     <div class="text-center">
-        <a href="{{config.github}}" target="_blank">
-            <img src="{{config.demo}}" alt="title">
-        </a>
+      <a href="{{ config.github }}" target="_blank">
+        <picture>
+          <img src="{{ config.demo }}" alt="project image" />
+        </picture>
+      </a>
     </div>
-</div>
+  </div>
 }

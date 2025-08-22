@@ -1,8 +1,7 @@
 import { CardModel } from "../model/card.model";
-import { Builder } from '../../interface/builder';
+import { Builder } from "../../interface/builder";
 
 export class CardBuilder implements Builder<CardModel> {
-
   private card: CardModel = new CardModel();
 
   setGithub(github: string): CardBuilder {
@@ -40,8 +39,12 @@ export class CardBuilder implements Builder<CardModel> {
     return this;
   }
 
+  setCol(col: string): CardBuilder {
+    this.card.col = col;
+    return this;
+  }
+
   build(): CardModel {
     return this.card;
   }
-
 }

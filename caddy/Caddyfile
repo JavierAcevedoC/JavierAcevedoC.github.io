@@ -1,0 +1,5 @@
+portfolio.local {
+    reverse_proxy portfolio_app:8080
+    tls internal
+}
+
